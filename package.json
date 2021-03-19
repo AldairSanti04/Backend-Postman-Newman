@@ -1,0 +1,19 @@
+{
+  "name": "second-assignment",
+  "version": "1.0.0",
+  "description": "Second Assignment - Challenge Excercises - Backend - Postman + Newman",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "newman run './test/api/collection/ASSESSMENT II - BACKEND.postman_collection.json' -e './test/api/envVariables/QA ASSESSMENT.postman_environment.json'",
+    "reporte": "npx newman run './test/api/collection/ASSESSMENT II - BACKEND.postman_collection.json' -e './test/api/envVariables/QA ASSESSMENT.postman_environment.json' -r htmlextra --reporter-htmlextra-export './test/api/reports/report.html'"
+  },
+  "author": "Jorge Aldair Santiago Rufino",
+  "license": "ISC",
+  "dependencies": {
+    "newman": "^5.2.2",
+    "newman-reporter-htmlextra": "^1.20.1"
+  }
+}
